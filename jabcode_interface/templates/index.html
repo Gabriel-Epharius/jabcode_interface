@@ -1,46 +1,74 @@
-
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Minha Página</title>
-        <style>
-            #form-wrapper {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
+  <head>
+    <meta charset="UTF-8">
+    <title>JABCODE Generator</title>
+    <style>
+      /* Define a fonte e o tamanho padrão */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      
+      /* Centraliza o formulário na página */
+      #form-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      
+      /* Estilo para o formulário */
+      form {
+        width: 80%;
+        max-width: 500px;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        padding: 20px;
+      }
+      
+      /* Estilo para o input */
+      input[type="text"] {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      
+      /* Estilo para o botão */
+      button[type="submit"] {
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #4caf50;
+        color: #fff;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+      
+      /* Estilo para o botão quando hover */
+      button[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      
+    </style>
+  </head>
 
-            form {
-                width: 80%;
-                max-width: 500px;
-            }
-
-            input[type="textbox"], input[type="submit"] {
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                font-size: 1.5rem;
-                padding: 10px;
-            }
-
-            input[type="submit"]{
-                margin-top: 10px;
-            }
-
-        </style>
-    </head>
-
-    <body>
-        <div id="form-wrapper">
-            <form method="POST" action="{% url 'process_textbox' %}">
-                {% csrf_token %}
-                <input type="text" id="textbox" name="textbox" placeholder="Digite o código." required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </body>
+  <body>
+    <div id="form-wrapper">
+      <form method="POST" action="{% url 'process_textbox' %}">
+        {% csrf_token %}
+        <input type="text" id="textbox" name="textbox" placeholder="Digite o código." required>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
 </html>
-
 
