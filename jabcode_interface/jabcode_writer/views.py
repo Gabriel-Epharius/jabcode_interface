@@ -17,7 +17,7 @@ def process_textbox(request):
         project_dir = os.path.dirname(os.path.abspath(__file__))
 
         output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'static'))
-        output_file = os.path.join(output_dir, 'test.png')
+        output_file = os.path.join(output_dir, 'images/test.png')
 
         subprocess.run(f'{os.path.join(project_dir, "jabcode_writer")} --input "{textbox_content}" --output "{output_file}"', shell=True)
 
