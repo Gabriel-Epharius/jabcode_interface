@@ -1,9 +1,13 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>Minha Página</title>
     </head>
     <body>
+        {% load static %}
+        <img src="{% static 'test.png' %}" alt="JABCODE Gerado">
         <p>A string salva é: {{ my_string }}</p>
     </body>
 </html>

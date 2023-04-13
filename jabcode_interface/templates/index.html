@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -31,6 +33,9 @@
     </head>
 
     <body>
+        {% load static %}
+      <!-- <img src="{% static 'test.png' %}" alt="JABCODE Gerado"> -->
+        
 
         <div id="form-wrapper">
             <form method="POST" action="{% url 'process_textbox' %}">
