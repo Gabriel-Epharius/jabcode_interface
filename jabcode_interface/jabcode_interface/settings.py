@@ -54,7 +54,7 @@ ROOT_URLCONF = 'jabcode_interface.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates', 'images'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

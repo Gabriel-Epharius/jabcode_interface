@@ -16,7 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from jabcode_writer import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+    path('process_textbox', views.process_textbox, name='process_textbox')
 ]
